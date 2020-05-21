@@ -1,7 +1,8 @@
-package com.example.gamebacklogkotlin.model
+package com.example.gamebacklogkotlin.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.gamebacklogkotlin.model.Game
 
 @Dao
 interface GameDAO {

@@ -1,8 +1,9 @@
-package com.example.gamebacklogkotlin.model
+package com.example.gamebacklogkotlin.database
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.gamebacklogkotlin.model.Game
 
 class GameRepository(context: Context) {
     private var gameDao: GameDAO
