@@ -1,17 +1,17 @@
-package com.example.gamebacklogkotlin.ui.edit
+package com.example.gamebacklogkotlin.ui.add
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamebacklogkotlin.R
 
-import kotlinx.android.synthetic.main.activity_edit.*
+import kotlinx.android.synthetic.main.activity_add.*
 
-class EditActivity : AppCompatActivity() {
+class AddActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit)
+        setContentView(R.layout.activity_add)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
