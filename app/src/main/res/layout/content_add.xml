@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@color/design_default_color_background"
+        android:theme="@style/Theme.MaterialComponents.Light"
         app:cardBackgroundColor="@color/design_default_color_background"
         app:cardCornerRadius="2dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +42,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="@string/title_hint"
+                    app:boxBackgroundColor="@color/design_default_color_background"
+                    app:boxBackgroundMode="filled"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -55,6 +58,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="@string/platform_hint"
+                    app:boxBackgroundColor="@color/design_default_color_background"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -78,6 +82,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="@string/day_hint"
+                    app:boxBackgroundColor="@color/design_default_color_background"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -92,6 +97,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="@string/month_hint"
+                    app:boxBackgroundColor="@color/design_default_color_background"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -106,6 +112,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="@string/year_hint"
+                    app:boxBackgroundColor="@color/design_default_color_background"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText

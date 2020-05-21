@@ -17,7 +17,7 @@ import com.example.gamebacklogkotlin.R
 import com.example.gamebacklogkotlin.model.Game
 import com.example.gamebacklogkotlin.model.GameAdapter
 import com.example.gamebacklogkotlin.ui.add.AddActivity
-import com.example.gamebacklogkotlin.ui.add.AddActivity.Companion.EXTRA_GAME
+import com.example.gamebacklogkotlin.ui.add.EXTRA_GAME
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         rvGames.addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
         createItemTouchHelper().attachToRecyclerView(rvGames)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             startAddActivity()
         }
     }
@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     private fun startAddActivity() {
         val intent = Intent(this, AddActivity::class.java)
         startActivityForResult(intent, ADD_GAME_REQUEST_CODE)
+        //startActivity(intent)
         /*val intent = Intent(this, AddActivity::class.java)
         intent.putExtra(AddActivity.EXTRA_GAME, arrayListOf(viewModel.games.value))
         startActivityForResult(intent, ADD_GAME_REQUEST_CODE)*/

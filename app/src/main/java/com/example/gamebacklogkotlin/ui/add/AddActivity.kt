@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.example.gamebacklogkotlin.R
 import com.example.gamebacklogkotlin.model.Game
 import kotlinx.android.synthetic.main.activity_add.*
@@ -16,7 +15,6 @@ const val EXTRA_GAME = "EXTRA_GAME"
 
 @Suppress("DEPRECATION")
 class AddActivity : AppCompatActivity() {
-    private lateinit var addViewModel: AddViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
@@ -26,8 +24,8 @@ class AddActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        fab.setOnClickListener { view ->
+        /*supportActionBar?.setDisplayHomeAsUpEnabled(true)*/
+        fab.setOnClickListener { _ ->
             onSaveClick()
         }
     }
