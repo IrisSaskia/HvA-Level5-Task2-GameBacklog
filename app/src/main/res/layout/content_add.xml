@@ -46,12 +46,14 @@
                     app:boxBackgroundMode="filled"
                     app:boxStrokeColor="@color/colorAccent"
                     app:boxStrokeWidth="1dp"
-                    app:hintEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorAccent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etTitle"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -62,12 +64,14 @@
                     android:hint="@string/platform_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:boxStrokeColor="@color/colorAccent"
-                    app:hintEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorAccent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPlatform"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -89,12 +93,14 @@
                     android:hint="@string/day_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:boxStrokeColor="@color/colorAccent"
-                    app:hintEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorAccent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDay"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -108,12 +114,14 @@
                     android:hint="@string/month_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:boxStrokeColor="@color/colorAccent"
-                    app:hintEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorAccent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etMonth"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -128,12 +136,14 @@
                     android:hint="@string/year_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:boxStrokeColor="@color/colorAccent"
-                    app:hintEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorAccent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etYear"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@drawable/color_cursor" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
