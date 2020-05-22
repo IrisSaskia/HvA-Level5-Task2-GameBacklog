@@ -33,7 +33,9 @@ class AddActivity : AppCompatActivity() {
 
     private fun onSaveClick() {
         if (etTitle.text.toString().isNotBlank()) {
-            val game = Game(etTitle.text.toString(), etPlatform.text.toString(), Date(etDay.text.toString().toInt(), etMonth.text.toString().toInt(), etYear.text.toString().toInt()))
+            val game = Game(etTitle.text.toString(), etPlatform.text.toString(), LocalDate(etYear.text.toString().toInt(), etMonth.text.toString().toInt(), etDay.text.toString().toInt()))
+            //val releaseDate = etYear.text.toString() + "-" + etMonth.text.toString() + "-" + etDay.text.toString()
+            //val game = Game(etTitle.text.toString(), etPlatform.text.toString(), releaseDate)
             val resultIntent = Intent()
             resultIntent.putExtra(EXTRA_GAME, game)
             setResult(Activity.RESULT_OK, resultIntent)
@@ -43,8 +45,4 @@ class AddActivity : AppCompatActivity() {
                 , Toast.LENGTH_SHORT).show()
         }
     }
-
-    /*companion object {
-        const val EXTRA_GAME = "EXTRA_GAME"
-    }*/
 }

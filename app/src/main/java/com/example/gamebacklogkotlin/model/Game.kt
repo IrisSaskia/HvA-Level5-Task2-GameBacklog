@@ -17,6 +17,7 @@ data class Game (
     var gamePlatform: String,
 
     @ColumnInfo(name = "gameReleaseDate")
+    //var gameReleaseDate: String, //Date werkt niet goed doordat je 3 getallen als invoer krijgt
     var gameReleaseDate: Date,
 
     @PrimaryKey(autoGenerate = true)

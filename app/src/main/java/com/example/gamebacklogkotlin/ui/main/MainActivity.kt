@@ -9,10 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.*
 import com.example.gamebacklogkotlin.R
 import com.example.gamebacklogkotlin.model.Game
 import com.example.gamebacklogkotlin.model.GameAdapter
@@ -27,7 +24,7 @@ const val ADD_GAME_REQUEST_CODE = 100
 class MainActivity : AppCompatActivity() {
     val TAG = MainActivity::class.java.simpleName
     private val games = arrayListOf<Game>()
-    private val gameAdapter = GameAdapter(games)
+    private val gameAdapter = GameAdapter(games, this)
     private val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,10 +59,6 @@ class MainActivity : AppCompatActivity() {
     private fun startAddActivity() {
         val intent = Intent(this, AddActivity::class.java)
         startActivityForResult(intent, ADD_GAME_REQUEST_CODE)
-        //startActivity(intent)
-        /*val intent = Intent(this, AddActivity::class.java)
-        intent.putExtra(AddActivity.EXTRA_GAME, arrayListOf(viewModel.games.value))
-        startActivityForResult(intent, ADD_GAME_REQUEST_CODE)*/
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -99,9 +92,17 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_delete -> {
+                deleteGameBacklog()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun deleteGameBacklog() {
+        viewModel.deleteAllGames()
+        observeViewModel()
     }
 
     /**

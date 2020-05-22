@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamebacklogkotlin.R
 import kotlinx.android.synthetic.main.item_game.view.*
+import java.text.SimpleDateFormat
+import android.content.Context
 
-class GameAdapter(private val games: List<Game>) :
+class GameAdapter(private val games: List<Game>, private val context: Context) :
     RecyclerView.Adapter<GameAdapter.ViewHolder>(){
 
     /**
@@ -20,8 +22,8 @@ class GameAdapter(private val games: List<Game>) :
             LayoutInflater.from(parent.context).inflate(R.layout.item_game, parent, false)
         )
     }
-    /* Returns the size of the list*/
 
+    /* Returns the size of the list*/
     override fun getItemCount(): Int {
         return games.size
     }
@@ -40,7 +42,14 @@ class GameAdapter(private val games: List<Game>) :
         fun bind(game: Game){
             itemView.tvName.text = game.gameTitle
             itemView.tvPlatform.text = game.gamePlatform
-            itemView.tvDate.text = Resources.getSystem().getString(R.string.release_date, game.gameReleaseDate.toString())
+            //itemView.tvDate.text = Resources.getSystem().getString(R.string.release_date, game.gameReleaseDate)
+            //itemView.tvDate.text = game.gameReleaseDate.toString()
+            itemView.tvDate.text = context.getString(R.string.release_date, game.gameReleaseDate.day.toString(), game.gameReleaseDate.month.toString(), game.gameReleaseDate.year.toString())
+            /*val gameDate = game.gameReleaseDate.toString()
+            val parser = SimpleDateFormat("E MMM dd hh:mm:ss ZZZZ yyyy")
+            val formatter = SimpleDateFormat("dd.MM.yyyy HH:mm")
+            val output: String = formatter.format(parser.parse(gameDate))
+            itemView.tvDate.text = output*/
         }
     }
 }
