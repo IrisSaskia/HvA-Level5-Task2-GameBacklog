@@ -42,9 +42,7 @@ class GameAdapter(private val games: List<Game>, private val context: Context) :
         fun bind(game: Game){
             itemView.tvName.text = game.gameTitle
             itemView.tvPlatform.text = game.gamePlatform
-            //itemView.tvDate.text = Resources.getSystem().getString(R.string.release_date, game.gameReleaseDate)
-            //itemView.tvDate.text = game.gameReleaseDate.toString()
-            itemView.tvDate.text = context.getString(R.string.release_date, game.gameReleaseDate.day.toString(), game.gameReleaseDate.month.toString(), game.gameReleaseDate.year.toString())
+            itemView.tvDate.text = context.getString(R.string.release_date, game.gameReleaseDate.dayOfYear.toString(), game.gameReleaseDate.month.toString(), game.gameReleaseDate.year.toString())
             /*val gameDate = game.gameReleaseDate.toString()
             val parser = SimpleDateFormat("E MMM dd hh:mm:ss ZZZZ yyyy")
             val formatter = SimpleDateFormat("dd.MM.yyyy HH:mm")

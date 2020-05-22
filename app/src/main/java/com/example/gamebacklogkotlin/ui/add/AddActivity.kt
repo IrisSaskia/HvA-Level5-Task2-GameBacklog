@@ -9,7 +9,7 @@ import com.example.gamebacklogkotlin.R
 import com.example.gamebacklogkotlin.model.Game
 import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.content_add.*
-import java.util.*
+import org.threeten.bp.LocalDate
 
 const val EXTRA_GAME = "EXTRA_GAME"
 
@@ -33,7 +33,7 @@ class AddActivity : AppCompatActivity() {
 
     private fun onSaveClick() {
         if (etTitle.text.toString().isNotBlank()) {
-            val game = Game(etTitle.text.toString(), etPlatform.text.toString(), LocalDate(etYear.text.toString().toInt(), etMonth.text.toString().toInt(), etDay.text.toString().toInt()))
+            val game = Game(etTitle.text.toString(), etPlatform.text.toString(), LocalDate.of(etYear.text.toString().toInt(), etMonth.text.toString().toInt(), etDay.text.toString().toInt()))
             //val releaseDate = etYear.text.toString() + "-" + etMonth.text.toString() + "-" + etDay.text.toString()
             //val game = Game(etTitle.text.toString(), etPlatform.text.toString(), releaseDate)
             val resultIntent = Intent()
