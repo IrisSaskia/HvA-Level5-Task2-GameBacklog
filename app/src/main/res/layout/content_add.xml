@@ -44,6 +44,8 @@
                     android:hint="@string/title_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
                     app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="@color/colorAccent"
+                    app:boxStrokeWidth="1dp"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -59,6 +61,7 @@
                     android:layout_weight="1"
                     android:hint="@string/platform_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
+                    app:boxStrokeColor="@color/colorAccent"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -85,6 +88,7 @@
                     android:layout_weight="1"
                     android:hint="@string/day_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
+                    app:boxStrokeColor="@color/colorAccent"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -103,6 +107,7 @@
                     android:layout_weight="1"
                     android:hint="@string/month_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
+                    app:boxStrokeColor="@color/colorAccent"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -122,6 +127,7 @@
                     android:layout_weight="1"
                     android:hint="@string/year_hint"
                     app:boxBackgroundColor="@color/design_default_color_background"
+                    app:boxStrokeColor="@color/colorAccent"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
